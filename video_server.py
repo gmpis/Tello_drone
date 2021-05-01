@@ -1,6 +1,8 @@
 import socket
+import time  # for timestamp
 
-fl_name = "vStream.h264"
+c_timestamp = int(time.time())  # float: time in seconds since epoch
+fl_name = "vStream_" + str(c_timestamp) + ".h264"  # for unique filenames
 f = open(fl_name, "wb")
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  # we need udp
