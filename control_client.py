@@ -27,6 +27,7 @@ def t_send_cmd(byte_cmd, d_dest, s_delay=2):
     
     # parse responce
     data, addr = s.recvfrom(1024)  # buffer is 1024 BYTES
+    data = data.decode("utf-8")
     print("Received:", data, "from:", addr)
     time.sleep(s_delay)  # 2 seconds
     
