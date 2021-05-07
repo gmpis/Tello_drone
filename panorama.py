@@ -1,6 +1,7 @@
 import numpy as np
 import cv2 as cv
 import matplotlib.pyplot as plt
+# import glob
 
 # open an image from hard-drive 
 img_name = "image.jpg"
@@ -20,7 +21,10 @@ for i in all_imgs:
   plt.imshow(i)
   plt.show()
 
-  
+# to create a panorama from many diff pictures
+# all_names = glog.glob("./frames/*.png")
+# and then open each image using cv.imread()
+
 # PANORAMA :: Mode for creating photo panoramas. (perspective transformation)
 # SCANS    :: Mode for composing scans.          (affine transformation)
 mode = cv.Stitcher_PANORAMA
